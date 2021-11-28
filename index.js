@@ -10,7 +10,7 @@ const MONGO_URL =
 process.env.MONGO_URL ;
 
 app.use(express.json());
-
+app.use(cors());
 export async function createConnection() {
   const client = new MongoClient(MONGO_URL);
   await client.connect();
@@ -23,5 +23,4 @@ app.get("/", (request, response) => {
 });
 
 app.use("/movies", moviesRouter);
-app.use(cors());
 app.listen(PORT, () => console.log("App is stated on ", PORT));
