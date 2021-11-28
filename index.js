@@ -2,14 +2,6 @@ import express, { query } from "express";
 import { MongoClient } from "mongodb";
 import dotenv from "dotenv";
 import cors from "cors";
-
-import {
-  getMoviesById,
-  showMovies,
-  addManyMovies,
-  DeleteOne,
-  updateOneMovie,
-} from "./getMoviesById.js";
 import { moviesRouter } from "./routes/movies.js";
 dotenv.config();
 const app = express();
