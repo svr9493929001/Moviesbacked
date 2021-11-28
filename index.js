@@ -1,6 +1,8 @@
 import express, { query } from "express";
 import { MongoClient } from "mongodb";
 import dotenv from "dotenv";
+import cors from "cors";
+
 import {
   getMoviesById,
   showMovies,
@@ -28,8 +30,6 @@ app.get("/", (request, response) => {
   response.send("This is the first port i build ");
 });
 
-app.use("/movies", moviesRouter)
-
+app.use("/movies", moviesRouter);
+app.use(cors());
 app.listen(PORT, () => console.log("App is stated on ", PORT));
-
-
