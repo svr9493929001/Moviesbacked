@@ -29,7 +29,7 @@ export async function addManyMovies(request) {
   const result = await client
     .db("B252we")
     .collection("movies")
-    .insertOne(data);
+    .insertMany(data);
   return result;
 }
 export async function DeleteOne(request) {
