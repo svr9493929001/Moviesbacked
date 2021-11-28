@@ -11,7 +11,7 @@ import {
 import { moviesRouter } from "./routes/movies.js";
 dotenv.config();
 const app = express();
-const PORT = 1000;
+const PORT = process.env.PORT || 1000;
 const MONGO_URL =
   process.env.MONGO_URL;
 // One stop soluction to parse all the request as json
