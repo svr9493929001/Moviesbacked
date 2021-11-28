@@ -24,9 +24,6 @@ export async function createConnection() {
 return client;
 }
 
-app.get("/", (request, response) => {
-  response.send("This is the first port i build !!!");
-});
 
 app.use("/movies", moviesRouter)
 
